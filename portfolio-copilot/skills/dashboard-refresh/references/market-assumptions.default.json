@@ -1,0 +1,51 @@
+{
+  "_comment": "Shared 'house view' on markets — not personal to any user. Ships as a working default so a fresh install renders a dashboard immediately; portfolio-setup copies this into the project as an editable market-assumptions.json. Re-research and bump dates periodically (e.g. via the market-researcher dispatch in dashboard-refresh's SKILL.md Step 6).",
+
+  "usIntlBenchmark": { "US": 63.6, "Intl": 36.4, "_source": "MSCI ACWI, as of 2026-05" },
+
+  "analystAggressiveWeights": {
+    "_note": "Analyst-favored sector weights for an aggressive equity book (% of equity), synthesized from 2026 Wall-Street sector overweights.",
+    "Info Tech": 30, "Financials": 15, "Industrials": 13, "Health Care": 11,
+    "Comm Services": 10, "Cons Disc": 9, "Energy": 4, "Cons Staples": 3,
+    "Materials": 2, "Utilities": 2, "Real Estate": 1
+  },
+
+  "sectorGrowth": {
+    "_note": "2026 earnings-growth outlook by sector (FactSet / Schwab). dir drives the dashboard's up/down tag.",
+    "Info Tech": {"dir": "up", "note": "double-digit EPS; AI capex"},
+    "Comm Services": {"dir": "down", "note": "EPS decel ~19%→35%"},
+    "Health Care": {"dir": "down", "note": "only sector w/ declining 2026 EPS"},
+    "Financials": {"dir": "up", "note": "steeper curve lifts margins"},
+    "Industrials": {"dir": "up", "note": "defense; Pentagon >$950B"},
+    "Cons Disc": {"dir": "up", "note": "double-digit EPS"},
+    "Materials": {"dir": "up", "note": "double-digit EPS"},
+    "Energy": {"dir": "flat", "note": "cyclical, rate-sensitive"},
+    "Cons Staples": {"dir": "flat", "note": "defensive, slower"},
+    "Utilities": {"dir": "up", "note": "AI data-center power demand"},
+    "Real Estate": {"dir": "flat", "note": "rate-sensitive"}
+  },
+
+  "benchSources": {
+    "acwi": ["MSCI ACWI (US 63.6%)", "https://www.msci.com/indexes/index/892400"],
+    "overweights": ["2026 Wall-Street sector overweights", "https://www.morganstanley.com/insights/articles/stock-market-investment-outlook-2026"],
+    "earnings": ["FactSet 2026 EPS outlook", "https://insight.factset.com/sp-500-cy-2026-earnings-preview-analysts-expect-earnings-growth-of-15"],
+    "schwab": ["Schwab sector views", "https://www.schwab.com/learn/story/stock-sector-outlook"]
+  },
+
+  "forecastRates": {
+    "_note": "5-year forecast assumptions (annual total return) by asset class.",
+    "equity": {"bear": 0.04, "base": 0.08, "bull": 0.11},
+    "bond": {"bear": 0.03, "base": 0.04, "bull": 0.05},
+    "gold": {"bear": 0.0, "base": 0.03, "bull": 0.07},
+    "private": {"bear": 0.0, "base": 0.10, "bull": 0.20},
+    "cash": {"bear": 0.02, "base": 0.02, "bull": 0.03}
+  },
+
+  "marketBenchmark": {
+    "_note": "Optional. A market index return (e.g. S&P 500) for the Momentum panel's 'vs the market' comparison — update by hand periodically, same cadence as sector-research and the rest of this file. Leave asof empty (as shipped here) to leave the comparison off; the dashboard skips it gracefully rather than showing a bogus '0% over an empty period' line. pct is a plain percent over periodLabel (e.g. summed monthly returns), not a precise price-to-price calc, so treat it as directional.",
+    "pct": 0,
+    "periodLabel": "",
+    "asof": "",
+    "sources": []
+  }
+}

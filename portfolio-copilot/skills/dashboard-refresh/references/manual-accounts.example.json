@@ -1,0 +1,86 @@
+[
+  {
+    "account": "401(k)",
+    "broker": "Example 401(k) Provider",
+    "sym": "VMCIX",
+    "name": "Example Mid-Cap Index Fund",
+    "qty": null,
+    "value": 145000.0,
+    "gl": 32000.0,
+    "group": "US Value & Size",
+    "source": "401k-statement-2026-09.pdf",
+    "buckets": {
+      "Info Tech": 26100.0,
+      "Industrials": 22475.0,
+      "Cons Disc": 18850.0,
+      "Financials": 18850.0,
+      "Health Care": 14500.0,
+      "Real Estate": 10150.0,
+      "Materials": 7250.0,
+      "Cons Staples": 7250.0,
+      "Utilities": 8700.0,
+      "Energy": 5800.0,
+      "Comm Services": 5075.0
+    }
+  },
+  {
+    "account": "Joint Brokerage (Example Broker)",
+    "broker": "Example Broker",
+    "sym": "VTI",
+    "name": "Example Total US Stock Market ETF",
+    "qty": 120.5,
+    "price": 285.10,
+    "value": 34354.55,
+    "gl": 6200.0,
+    "group": "US Broad Core",
+    "source": "joint-brokerage-2026-09.csv"
+  },
+  {
+    "account": "Joint Brokerage (Example Broker)",
+    "broker": "Example Broker",
+    "sym": "VXUS",
+    "name": "Example Total International Stock ETF",
+    "qty": 200.0,
+    "price": 68.20,
+    "value": 13640.0,
+    "gl": 900.0,
+    "group": "International",
+    "source": "joint-brokerage-2026-09.csv"
+  },
+  {
+    "account": "Employer ESPP/RSU (Example Broker)",
+    "broker": "Example Broker",
+    "sym": "ACME",
+    "name": "Acme Corp",
+    "qty": 300.0,
+    "price": 45.00,
+    "value": 13500.0,
+    "gl": -2100.0,
+    "group": "Financials & Fintech",
+    "source": "espp-statement-2026-09.pdf",
+    "buckets": { "Financials": 13500.0 }
+  },
+  {
+    "account": "HSA (Example Bank)",
+    "broker": "Example Bank",
+    "sym": "VBIAX",
+    "name": "Example Balanced Index Fund",
+    "qty": null,
+    "value": 9200.0,
+    "gl": 1100.0,
+    "group": "US Broad Core",
+    "source": "hsa-statement-2026-09.png"
+  },
+  {
+    "account": "Savings (Example Bank)",
+    "broker": "Example Bank",
+    "sym": "CASH",
+    "name": "Cash / savings",
+    "qty": null,
+    "value": 18000.0,
+    "gl": 0.0,
+    "group": "Cash",
+    "source": "savings-statement-2026-09.pdf",
+    "buckets": { "Cash": 18000.0 }
+  }
+]

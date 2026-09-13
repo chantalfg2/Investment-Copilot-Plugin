@@ -1,0 +1,94 @@
+{
+  "_comment": "Example portfolio-profile.json — the identity/risk/target-allocation/contributions/constraints config that build_dashboard.py reads at runtime. portfolio-setup generates this from an interview; edit it by hand any time your situation changes. Every value below is synthetic placeholder data, not a real recommendation.",
+
+  "user": {
+    "name": "Alex Rivera",
+    "riskTolerance": "moderate-to-aggressive growth",
+    "lifeStage": "mid-30s, dual income, no near-term liquidity events planned",
+    "liquidityHorizon": {
+      "note": "No known near-term liquidity need — investment horizon is the standard 20+ years to retirement.",
+      "windowStartDate": null
+    },
+    "investmentHorizonYears": 25
+  },
+
+  "notifications": { "email": "alex.rivera@example.com" },
+
+  "vehiclePreference": { "etfFirst": true, "maxFundsPerMonth": 3 },
+
+  "concentrationWatch": [
+    { "symbol": "ACME", "label": "Acme Corp", "employerLinked": true }
+  ],
+
+  "recommendedAllocation": {
+    "Info Tech": 20.0, "Health Care": 8.0, "Financials": 8.0, "Industrials": 6.0,
+    "Cons Disc": 6.0, "Comm Services": 5.0, "Cons Staples": 4.0, "Energy": 3.0,
+    "Utilities": 2.0, "Real Estate": 2.0, "Materials": 1.0,
+    "Intl ex-US": 15.0, "Bonds": 15.0, "Gold / Alt": 2.0, "Cash": 3.0
+  },
+
+  "accounts": [
+    {
+      "name": "Joint Brokerage (Example Broker)",
+      "broker": "Example Broker",
+      "flexibility": "flexible",
+      "flexibilityNote": "full taxable brokerage — any ETF or stock",
+      "monthlyContribution": 1500.0,
+      "contribLabel": "Joint"
+    },
+    {
+      "name": "401(k)",
+      "broker": "Example 401(k) Provider",
+      "flexibility": "restricted",
+      "flexibilityNote": "limited to the plan's fund lineup — use its own fund elections, not open-market tickers",
+      "monthlyContribution": 2000.0,
+      "contribLabel": "401(k)"
+    },
+    {
+      "name": "HSA (Example Bank)",
+      "broker": "Example Bank",
+      "flexibility": "restricted",
+      "flexibilityNote": "HSA investment menu is typically limited — confirm an intl/bond fund is offered before assuming",
+      "monthlyContribution": 300.0,
+      "contribLabel": "HSA"
+    },
+    {
+      "name": "Employer ESPP/RSU (Example Broker)",
+      "broker": "Example Broker",
+      "flexibility": "restricted",
+      "flexibilityNote": "single-stock ESPP/RSU account — not a vehicle for diversifying into intl/bonds",
+      "monthlyContribution": 0.0,
+      "contribLabel": "Employer equity"
+    },
+    {
+      "name": "Savings (Example Bank)",
+      "broker": "Example Bank",
+      "flexibility": "cash",
+      "flexibilityNote": "savings account — not an investing vehicle",
+      "monthlyContribution": 0.0,
+      "contribLabel": "Savings"
+    }
+  ],
+
+  "individualStockSymbols": ["ACME", "NVDA"],
+
+  "constraints": [
+    "Avoid direct exposure to companies with material operations in sanctioned countries."
+  ],
+
+  "goals": {
+    "Retirement readiness": {
+      "target": 1500000.0,
+      "current": 0.0,
+      "unit": "assets needed vs. projected",
+      "source": "Replace with your own retirement-plan projection once available; leave the whole entry out of this file until then.",
+      "note": "This should be a forward-looking planning estimate (e.g. from a 401(k) provider's own projection tool), not this month's live portfolio total — don't confuse the two."
+    }
+  },
+
+  "_valueMarks_example": "OPTIONAL, goes in the real 'valueMarks' key below, empty by default. Every key must be an account name with a {markedValue, effectiveMonth, note} object — no other shape. Example: { \"Private Fund Example\": { \"markedValue\": 50000.0, \"effectiveMonth\": \"2026-09\", \"note\": \"Dated, sourced rationale for the estimate.\" } }",
+  "valueMarks": {},
+
+  "_forecastOverrides_example": "OPTIONAL, goes in the real 'forecastOverrides' key below, empty by default. Every key must be an account name with a {rateClass|skipMonths|markMultiple, note} object — no other shape. Example: { \"Private Fund Example\": { \"rateClass\": \"equity\", \"note\": \"Why this account's forecast rate/contribution schedule was overridden.\" } }",
+  "forecastOverrides": {}
+}

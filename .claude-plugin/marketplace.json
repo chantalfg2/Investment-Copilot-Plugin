@@ -1,0 +1,12 @@
+{
+  "name": "portfolio-copilot-marketplace",
+  "description": "Marketplace hosting the portfolio-copilot plugin — monthly portfolio dashboard refresh and ranked investment brief.",
+  "owner": { "name": "Chantal" },
+  "plugins": [
+    {
+      "name": "portfolio-copilot",
+      "source": "./portfolio-copilot",
+      "description": "Monthly personal-portfolio dashboard refresh and ranked investment research brief, calibrated to a user-defined profile"
+    }
+  ]
+}

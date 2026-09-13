@@ -1,0 +1,16 @@
+# macOS
+.DS_Store
+
+# Safety net only — none of these should ever exist inside the plugin's own
+# folder (personal data belongs in the user's separate project folder, per
+# README.md's "Where your data lives vs. the plugin"). Ignored here in case
+# someone runs a skill from inside this repo by mistake.
+holdings/
+portfolio-profile.json
+portfolio-context.md
+market-assumptions.json
+decision-log.json
+sector-research.json
+dashboards/
+briefs/
+*.docx
