@@ -10,7 +10,9 @@ brief, calibrated to a user-defined profile — not any one person's accounts.
   dashboard with look-through sector exposure, risk concentration, a 5-year
   forecast, and allocation-vs-target gaps.
 - **Monthly brief** — a five-phase MECE research process that turns those
-  gaps into a ranked, sourced top-5 investment brief, saved as a `.docx`.
+  gaps into a ranked, sourced top-5 investment brief, saved as a `.docx`
+  (falls back to `.md` if no docx-authoring capability is available in your
+  Claude Code setup — the brief still gets written either way).
 
 ## Install
 

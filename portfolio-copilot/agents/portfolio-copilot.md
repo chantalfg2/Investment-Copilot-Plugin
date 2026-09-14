@@ -31,7 +31,8 @@ project looks like:
 ├── sector-research.json       niche-sector deep-research cards
 ├── holdings/                  one subfolder per month of dropped statements
 ├── dashboards/                YYYY-MM-dashboard.html + YYYY-MM-metrics.json
-└── briefs/                    YYYY-MM-investment-brief.docx
+└── briefs/                    YYYY-MM-investment-brief.docx (or .md — see
+                                monthly-brief's SKILL.md fallback)
 ```
 
 If `portfolio-profile.json` is missing, none of the other skills can run
